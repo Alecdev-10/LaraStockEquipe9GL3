@@ -32,6 +32,8 @@ _ide_helper.php
 /.mcp.json
 /boost.json
 /opencode.json
+# Doc d'architecture locale : conservée hors du dépôt (sur le Bureau)
+/architecture.html
 Homestead.json
 Homestead.yaml
 Thumbs.db

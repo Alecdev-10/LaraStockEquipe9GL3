@@ -17,10 +17,10 @@
     <body class="font-sans text-slate-900 antialiased">
         <div class="flex min-h-screen flex-col items-center bg-gradient-to-b from-slate-100 to-slate-200 pt-10 sm:justify-center sm:pt-0">
             <div>
-                <a href="/">
-                    <x-application-logo class="h-20 w-20 fill-current text-slate-500" />
+                <a href="/" class="flex flex-col items-center gap-3">
+                    <img src="{{ asset('images/larastock-icone.svg') }}" alt="" class="h-16 w-16">
+                    <img src="{{ asset('images/larastock-logo.svg') }}" alt="LaraStock" class="h-9 w-auto">
                 </a>
-                <p class="mt-3 text-center text-xl font-bold tracking-tight text-slate-900">LaraStock</p>
             </div>
 
             <div class="mt-6 w-full border border-slate-200 bg-white px-8 py-8 shadow-lg sm:max-w-md sm:rounded-2xl">

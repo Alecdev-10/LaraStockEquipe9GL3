@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 160" width="760" height="160" role="img" aria-label="Larastock">
+<rect width="760" height="160" fill="#FFFFFF"/>
+<g transform="translate(20 14) scale(2.15)">
+<rect x="10" y="8" width="12" height="48" rx="2" fill="#0F2A43"/>
+<rect x="10" y="44" width="42" height="12" rx="2" fill="#0F2A43"/>
+<rect x="26" y="30" width="12" height="10" rx="2" fill="#0E8F83"/>
+<rect x="40" y="30" width="12" height="10" rx="2" fill="#0E8F83"/>
+<rect x="26" y="16" width="12" height="10" rx="2" fill="#0E8F83"/>
+</g>
+<text x="165" y="104" font-family="Manrope, 'Helvetica Neue', Arial, sans-serif" font-size="84" letter-spacing="-2.5" fill="#0F2A43"><tspan font-weight="800">Lara</tspan><tspan font-weight="400">stock</tspan></text>
+</svg>
