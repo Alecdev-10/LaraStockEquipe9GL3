@@ -10,6 +10,7 @@ LaraStock est une application web de suivi de stock. Elle permet au gérant de c
 - Consultation, création, modification et suppression d'un produit.
 - Affichage des alertes de stock faible ou en rupture.
 - Association des produits à une catégorie.
+- Données de démonstration : 5 catégories et 30 produits informatiques et électroniques (`php artisan db:seed`).
 
 ## Prérequis
 
