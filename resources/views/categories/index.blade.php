@@ -20,11 +20,11 @@
 
         <div class="panel">
             @if ($categories->isEmpty())
-                <p class="text-gray-500">Aucune catégorie pour le moment.</p>
+                <p class="text-slate-500">Aucune catégorie pour le moment.</p>
             @else
                 <table class="w-full">
                     <thead>
-                        <tr class="border-b border-gray-200 text-left text-sm text-gray-600">
+                        <tr class="border-b border-slate-200 text-left text-sm text-slate-600">
                             <th class="py-2 pr-4">Nom</th>
                             <th class="py-2 pr-4">Produits</th>
                             <th class="py-2 text-right">Actions</th>
@@ -32,7 +32,7 @@
                     </thead>
                     <tbody>
                         @foreach ($categories as $category)
-                            <tr class="border-b border-gray-100">
+                            <tr class="border-b border-slate-100">
                                 <td class="table-cell font-medium">{{ $category->name }}</td>
                                 <td class="table-cell">{{ $category->products_count }}</td>
                                 <td class="table-cell text-right">
