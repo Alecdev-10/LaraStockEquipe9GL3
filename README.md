@@ -4,7 +4,7 @@ LaraStock est une application web de suivi de stock. Elle permet au gérant de c
 
 ## Fonctionnalités
 
-- Inscription, connexion et déconnexion.
+- Inscription, connexion, déconnexion, réinitialisation du mot de passe et vérification d'e-mail avec Laravel Fortify.
 - Consultation de la liste des produits, avec pagination.
 - Recherche par nom ou référence, filtres et tri.
 - Consultation, création, modification et suppression d'un produit.
