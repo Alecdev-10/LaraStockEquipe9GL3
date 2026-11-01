@@ -22,6 +22,7 @@
             @endisset
 
             <main>
+                <x-flash-messages />
                 {{ $slot }}
             </main>
         </div>

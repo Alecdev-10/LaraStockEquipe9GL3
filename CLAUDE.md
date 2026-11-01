@@ -1,3 +1,12 @@
+# LaraStock — Équipe 9
+
+Application Laravel de suivi de stock pour une petite boutique (sujet C). Installation et compte démo : voir `README.md` (base PostgreSQL, `php artisan migrate --seed`).
+
+- Toujours répondre en français, avec les accents corrects.
+- Ne jamais exécuter `git push` : c'est l'utilisateur qui commit et pousse lui-même.
+- Tests : `php artisan test` (Pest) ; style : `vendor/bin/pint`.
+- Les fichiers d'outils d'agents (`.agents/`, `.claude/skills/`, `.mcp.json`, `boost.json`, `opencode.json`) sont exclus du dépôt via `.gitignore`.
+
 <laravel-boost-guidelines>
 === foundation rules ===
 

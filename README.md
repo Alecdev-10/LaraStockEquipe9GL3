@@ -1,74 +1,68 @@
-# LaraStock
+# LaraStock — Équipe 9
 
-LaraStock est une application web de suivi de stock. Elle permet au gérant de consulter et de gérer les produits d'un stock.
+Application de **suivi de stock pour une petite boutique** (sujet C), développée avec Laravel.
+
+- **Dépôt** : https://github.com/Alecdev-10/LaraStockEquipe9GL3
+- **Équipe 9** : Cléanthe Mahoulomè HOUNSOUNON TOLIN et Alec KOUNOUEWA
 
 ## Fonctionnalités
 
-- Inscription, connexion, déconnexion, réinitialisation du mot de passe et vérification d'e-mail avec Laravel Fortify.
-- Consultation de la liste des produits, avec pagination.
-- Recherche par nom ou référence, filtres et tri.
-- Consultation, création, modification et suppression d'un produit.
-- Affichage des alertes de stock faible ou en rupture.
-- Association des produits à une catégorie.
+- Authentification (inscription, connexion, déconnexion) via Laravel Fortify, avec des vues en français
+- Gestion des produits : liste avec recherche (nom ou référence), filtre par catégorie et par état de stock (stock faible / rupture), tri, pagination ; création, modification et suppression avec confirmation
+- Gestion des catégories : liste avec le nombre de produits, création, modification ; la suppression est refusée avec un message clair si la catégorie contient encore des produits
+- Tableau de bord : nombre de produits, valeur du stock (quantité × prix), nombre de stocks faibles et de ruptures, alertes de stock, répartition par catégorie
+- Messages flash de succès / d'erreur dans le layout, états « liste vide », seuil d'alerte personnalisable par produit
 
-## Prérequis
+## Choix techniques
 
-- PHP 8.3 ou supérieur
-- Composer
-- Node.js et npm
-- MySQL 8 ou supérieur
+- Laravel 13, PHP 8.4+, Blade + Tailwind CSS + Vite
+- Base de données PostgreSQL (SQLite possible en local)
+- Authentification : Laravel Fortify
+- Tests : Pest
 
 ## Installation
 
-Depuis la racine du projet :
-
 ```bash
 composer install
-```
-
-Créer le fichier d'environnement et générer la clé de l'application :
-
-```bash
 cp .env.example .env
 php artisan key:generate
 ```
 
-Configurer MySQL dans `.env` (`DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME` et `DB_PASSWORD`). La base `LaraStock` doit déjà exister. Pour le développement local, le port configuré est `3307` ; `.env.example` utilise le port standard `3306`.
+Créer la base PostgreSQL, puis configurer `.env` :
 
-Lancer les migrations et installer les dépendances front-end :
-
-```bash
-php artisan migrate --seed
-npm install
-npm run build
+```env
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=larastock
+DB_USERNAME=postgres
+DB_PASSWORD=votre_mot_de_passe
 ```
 
-## Lancement en développement
-
-Dans un terminal, démarrer Laravel :
-
 ```bash
+# Dans psql : CREATE DATABASE larastock;
+php artisan migrate --seed
+npm install && npm run build
 php artisan serve
 ```
 
-Dans un autre terminal, démarrer Vite pour les ressources front-end :
+L'application est alors disponible sur http://127.0.0.1:8000
+
+## Compte de démonstration
+
+- **E-mail** : `demo@larastock.fr`
+- **Mot de passe** : `password`
+
+## Tests et qualité
 
 ```bash
-npm run dev
+php artisan test            # suite de tests Pest
+vendor/bin/pint --test      # vérification du style de code
 ```
 
-Ouvrir ensuite l'adresse affichée par Artisan, généralement <http://127.0.0.1:8000>. Un compte peut être créé depuis `/register`.
+## Répartition des tâches
 
-## Tests et formatage
-
-Lancer toute la suite de tests Pest :
-
-```bash
-composer test
-```
-
-Vérifier le formatage PHP avec Pint :
-
-```bash
-composer lint
-```
+| Membre | Tâches réalisées |
+| --- | --- |
+| Cléanthe TOLIN | Base du projet (migrations, PostgreSQL, `created_by`), modèles `Category` / `Product` (relations, scopes de recherche et de stock), factories et seeders, CRUD des catégories, tableau de bord, messages flash / états vides / confirmations, README |
+| Alec KOUNOUEWA | Authentification (basculée vers Laravel Fortify) et gestion des produits (CRUD, recherche, filtres, tri, pagination) avec tests associés |

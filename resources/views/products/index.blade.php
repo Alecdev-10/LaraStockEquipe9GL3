@@ -7,10 +7,6 @@
     </x-slot>
 
     <div class="page-container">
-        @if (session('success'))
-            <div class="mb-5 rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-green-800">{{ session('success') }}</div>
-        @endif
-
         <section class="panel mb-6">
             <form method="GET" action="{{ route('products.index') }}" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
                 <div class="lg:col-span-2">

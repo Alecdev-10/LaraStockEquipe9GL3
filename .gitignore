@@ -26,6 +26,12 @@
 /storage/pail
 /vendor
 _ide_helper.php
+# Outils d'agents (skills Boost, configs MCP/Boost/OpenCode) : non versionnés
+/.agents/
+/.claude/skills/
+/.mcp.json
+/boost.json
+/opencode.json
 Homestead.json
 Homestead.yaml
 Thumbs.db
